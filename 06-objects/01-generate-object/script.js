@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener('click', () => { 
+        let people = {
+            lastname: 'Bayet',
+            firstname: 'Serge',
+            age: 43,
+            city: 'Liège',
+            country: 'Belgique'
+        };
+        console.log(people);
+    });
+
 })();

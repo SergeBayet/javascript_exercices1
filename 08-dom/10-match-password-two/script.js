@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener( 'click', () => {
+        input_pass_one = document.getElementById('pass-one');
+        input_pass_two = document.getElementById('pass-two');
+        pass_one = input_pass_one.value;
+        pass_two = input_pass_two.value;
+        if(pass_one !== pass_two)
+        {
+            input_pass_one.classList.add('error');
+            input_pass_two.classList.add('error');
+
+        }
+        else
+        {
+            input_pass_one.classList.remove('error');
+            input_pass_two.classList.remove('error');
+            
+
+        }
+        console.log(pass_one,pass_two);
+    });
 })();

@@ -26,4 +26,17 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener('click', () => { 
+        if(fruits.find(search)) {
+            console.log("oui il y a une pomme");
+        }
+        else
+        {
+            console.log("non, il n'y a pas de pomme");
+        }
+    });
+    function search(fruit)
+    {
+        return fruit == 'pomme';
+    }
 })();

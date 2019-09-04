@@ -37,6 +37,17 @@
         "tangent",
         "arboré",
     ]);
-
+    document.getElementById("run").addEventListener('click', () => { 
+        let birdName;
+        randomBird = birds[ Math.floor(Math.random() * birds.length) ];
+        
+        adjArray = Array.from(adjectives);
+        randomAdjective = adjArray[Math.floor(Math.random() * adjArray.length)];
+        
+        birdName = randomBird.name + ' ' + randomAdjective;
+        birdName += randomBird.fem ? 'e' : '';
+        
+        document.getElementById('target').innerHTML = birdName;
+    });
     // your code here
 })();

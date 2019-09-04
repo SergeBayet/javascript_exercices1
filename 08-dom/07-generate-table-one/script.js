@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    target = document.getElementById('target');
+    table = document.createElement('table');
+    
+    table.setAttribute('style','border:2px');
+    
+    for( var i = 0 ; i < 10 ; i++ )
+    {
+        tr = document.createElement('tr');
+        tr.setAttribute('style','height:20px');
+        tr.appendChild(document.createElement('td'));
+        table.appendChild(tr);
+    }
+    
+    target.appendChild(table);
 })();

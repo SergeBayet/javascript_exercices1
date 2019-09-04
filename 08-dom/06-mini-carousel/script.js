@@ -17,6 +17,15 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
+    let currentSlide = 0;
 
+    document.getElementById("next").addEventListener('click', () => {
+        currentSlide++;
+        if(currentSlide >= gallery.length) {
+            currentSlide = 0;
+        }
+        img = document.querySelector('img');
+        img.setAttribute('src',gallery[currentSlide]);
+    });
     // your code here
 })();

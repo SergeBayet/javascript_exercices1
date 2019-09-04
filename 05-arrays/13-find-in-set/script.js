@@ -21,6 +21,12 @@
         "Simon",
         "Lucas",
     ]);
-
+    document.getElementById("run").addEventListener('click', () => { 
+        console.log(people.size);
+        if(people.has("Alexandre"))
+        {
+            console.log("Alexandre est bien là");
+        }
+     });
     // your code here
 })();

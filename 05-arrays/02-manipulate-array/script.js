@@ -1,3 +1,4 @@
+
 /* becode/javascript
  *
  * /05-arrays/02-manipulate-array/script.js - 5.2: manipulation de tableau
@@ -22,6 +23,14 @@
         "raisin",
         "cerise",
     ];
-
+    
+    document.getElementById("run").addEventListener('click', () => {
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift("banane");
+        fruits.push("kiwi");
+        console.log(fruits.toString());
+        
+    });
     // your code here
 })();

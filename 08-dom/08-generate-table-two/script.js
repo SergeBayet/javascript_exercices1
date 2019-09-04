@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+    target = document.getElementById('target');
+    table = document.createElement('table');
+    
+    table.setAttribute('style','border:2px');
+    
+    for( var i = 0 ; i < 10 ; i++ )
+    {
+        tr = document.createElement('tr');
+        tr.setAttribute('style','height:20px');
+        for( var j = 0 ; j < 10 ; j ++)
+        {
+            td = document.createElement('td');
+            multiplication = (i + 1) * (j + 1);
+            text = document.createTextNode(multiplication.toString());
+            td.appendChild(text);
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+    
+    target.appendChild(table);
 })();

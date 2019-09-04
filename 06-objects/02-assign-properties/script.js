@@ -26,5 +26,14 @@
         os: "linux",
         user: null,
     };
+    document.getElementById("run").addEventListener('click', () => { 
+        computers.forEach(element => {
+            element.available = !element.hasOwnProperty('available') ? defaultProps.available : element.available;
+            element.os = !element.hasOwnProperty('os') ? defaultProps.os : element.os;
+            element.user = !element.hasOwnProperty('user') ? defaultProps.user : element.user;
+            console.log(element);
+        });
+        
+    });
     // your code here
 })();

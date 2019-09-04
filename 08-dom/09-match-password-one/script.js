@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener( 'click', () => {
+        input_pass_one = document.getElementById('pass-one');
+        input_pass_two = document.getElementById('pass-two');
+        pass_one = input_pass_one.value;
+        pass_two = input_pass_two.value;
+        if(pass_one !== pass_two)
+        {
+            input_pass_one.setAttribute('style','border: .1rem solid red');
+            input_pass_two.setAttribute('style','border: .1rem solid red')
+
+        }
+        else
+        {
+            input_pass_one.setAttribute('style','border: .1rem solid green')
+            input_pass_two.setAttribute('style','border: .1rem solid green')
+
+        }
+        console.log(pass_one,pass_two);
+    });
 })();

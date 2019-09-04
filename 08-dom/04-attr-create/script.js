@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    let url = document.getElementById("source").getAttribute("data-image");
+    img = document.createElement("img");
+    attr = document.createAttribute("src");
+    attr.value = url;
+    img.setAttributeNode(attr);
+    target = document.getElementById("target");
+    target.appendChild(img);
+    material = document.querySelector(".material");
+    source = document.getElementById("source");
+    material.removeChild(source);
 })();

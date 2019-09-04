@@ -87,6 +87,10 @@
             age: 81,
         },
     ];
-
+    document.getElementById("run").addEventListener('click', () => { 
+        reducer = (accumulator, currentValue) => accumulator + currentValue.age;
+        totalAge = people.reduce(reducer, 0);
+        console.log(totalAge);
+    });
     // your code here
 })();

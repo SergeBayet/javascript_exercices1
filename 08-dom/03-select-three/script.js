@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    targets = document.querySelectorAll('.target');
+    targets.forEach( element => {
+        element.innerHTML = 'owned';
+    });
 })();
