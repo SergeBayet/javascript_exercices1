@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  target = document.getElementById("target");
+  document.getElementById("slider").addEventListener("click", () => {
+    target.innerText = "+" + document.getElementById("slider").value;
+  });
 })();

@@ -10,5 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  document.getElementById("pass-one").addEventListener("input", () => {
+    indicator = document.getElementById("validity");
+    inputValue = document.getElementById("pass-one").value;
+
+    validation = validate(inputValue);
+    console.log(validation);
+    indicator.innerHTML = validation ? "Ok" : "Pas ok";
+  });
+  function validate(pwd) {
+    let returnValue = false;
+    if (pwd.length >= 8) {
+      let nDigits = 0;
+      for (var i = 0; i < pwd.length; i++) {
+        car = pwd.charAt(i);
+        if (!isNaN(car)) {
+          nDigits++;
+        }
+      }
+      if (nDigits >= 2) {
+        returnValue = true;
+      }
+    }
+    return returnValue;
+  }
 })();
