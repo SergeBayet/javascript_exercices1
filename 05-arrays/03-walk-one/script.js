@@ -10,26 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    const fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "kiwi",
-        "banane",
-        "orange",
-        "mandarine",
-        "durian",
-        "pêche",
-        "raisin",
-        "cerise",
-    ];
-    document.getElementById("run").addEventListener('click', () => {
-        for(var i = 0 ; i < fruits.length ; i++)
-        {
-            console.log(fruits[i]);
-        }
+  const fruits = [
+    "pomme",
+    "poire",
+    "fraise",
+    "tomate",
+    "kiwi",
+    "banane",
+    "orange",
+    "mandarine",
+    "durian",
+    "pêche",
+    "raisin",
+    "cerise"
+  ];
+  document.getElementById("run").addEventListener("click", () => {
+    fruits.forEach(function(el) {
+      console.log(el);
     });
+  });
 
-    // your code here
+  // your code here
 })();

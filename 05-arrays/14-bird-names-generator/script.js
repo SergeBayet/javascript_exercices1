@@ -10,44 +10,44 @@
 // You will have time to focus on it later.
 
 (() => {
-    const birds = [
-        {name: "mouette", fem: true},
-        {name: "corbeau"},
-        {name: "mésange", fem: true},
-        {name: "hibou"},
-        {name: "buse", fem: true},
-        {name: "pigeon"},
-        {name: "pie", fem: true},
-        {name: "vautour"},
-        {name: "faucon"},
-        {name: "rouge-gorge"},
-        {name: "tourterelle", fem: true},
-        {name: "corneille", fem: true},
-    ];
-    const adjectives = new Set([
-        "cendré",
-        "huppé",
-        "chantant",
-        "hurlant",
-        "perché",
-        "grand",
-        "petit",
-        "bleu",
-        "pantelant",
-        "tangent",
-        "arboré",
-    ]);
-    document.getElementById("run").addEventListener('click', () => { 
-        let birdName;
-        randomBird = birds[ Math.floor(Math.random() * birds.length) ];
-        
-        adjArray = Array.from(adjectives);
-        randomAdjective = adjArray[Math.floor(Math.random() * adjArray.length)];
-        
-        birdName = randomBird.name + ' ' + randomAdjective;
-        birdName += randomBird.fem ? 'e' : '';
-        
-        document.getElementById('target').innerHTML = birdName;
-    });
-    // your code here
+  const birds = [
+    { name: "mouette", fem: true },
+    { name: "corbeau" },
+    { name: "mésange", fem: true },
+    { name: "hibou" },
+    { name: "buse", fem: true },
+    { name: "pigeon" },
+    { name: "pie", fem: true },
+    { name: "vautour" },
+    { name: "faucon" },
+    { name: "rouge-gorge" },
+    { name: "tourterelle", fem: true },
+    { name: "corneille", fem: true }
+  ];
+  const adjectives = new Set([
+    "cendré",
+    "huppé",
+    "chantant",
+    "hurlant",
+    "perché",
+    "grand",
+    "petit",
+    "bleu",
+    "pantelant",
+    "tangent",
+    "arboré"
+  ]);
+  document.getElementById("run").addEventListener("click", () => {
+    let birdName;
+    randomBird = birds[Math.floor(Math.random() * birds.length)];
+
+    adjArray = [...adjectives];
+    randomAdjective = adjArray[Math.floor(Math.random() * adjArray.length)];
+
+    birdName =
+      randomBird.name + " " + randomAdjective + (randomBird.fem ? "e" : "");
+
+    document.getElementById("target").innerHTML = birdName;
+  });
+  // your code here
 })();

@@ -13,6 +13,7 @@
   // to get the value of an input: document.getElementById("element-id").value
   var x = parseInt(document.getElementById("op-one").value);
   var y = parseInt(document.getElementById("op-two").value);
+  console.log(x, y);
   document.getElementById("addition").addEventListener("click", () => {
     // perform an addition
     alert(x + y);

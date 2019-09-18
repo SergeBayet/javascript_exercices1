@@ -10,22 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-    document.getElementById("run").addEventListener("click", () => {
-        year = document.getElementById("year").value;
-        startDate = new Date(year + "-01-01");
-        endDate = new Date(year + "-12-31");
-        d = new Date(startDate);
-        while(d <= endDate)
-        {
-            
-            if(d.getDay() == 4 && d.getDate() == 13)
-            {
-                console.log(d);
-              
-            }
-            d.setDate(d.getDate() + 1);
-
-        }
-    });
+  // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    year = document.getElementById("year").value;
+    startDate = new Date(year + "-01-01");
+    endDate = new Date(year + "-12-31");
+    d = new Date(startDate);
+    console.log(startDate, endDate);
+    while (d <= endDate) {
+      if (d.getDay() == 5 && d.getDate() == 13) {
+        console.log(d);
+      }
+      d.setDate(d.getDate() + 1);
+    }
+  });
 })();
